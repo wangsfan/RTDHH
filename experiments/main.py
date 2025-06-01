@@ -401,9 +401,7 @@ if __name__ == '__main__':
     parser.add_argument('--batch_size', type=int, default=128)
     parser.add_argument('--seed', type=int, default=100)
     parser.add_argument('--dataset_path', type=str, default="/home/yqn/data")
-
     parser.add_argument('--metadata_root', type=str, default="/home/yqn/RTDHH/iirc/metadata")
-
     parser.add_argument('--group', type=str, default="experiments_cifar",
                         choices=["experiments_cifar", "experiments_imagenet_subset", "experiments_imagenet_lite", "experiments_imagenet_full"],
                         help="The parent folder of the experiment results, so as to group related experiments easily")
@@ -442,7 +440,6 @@ if __name__ == '__main__':
     parser.add_argument('--threshold', type=float, default=0.6, help="The threshold to decide hard relation (the superclass for the new classes).")
     parser.add_argument('--C_norm_bdr', type=float, default=0.6, help="The When prob_max > C_norm_bdr， the new class corresponding to the prob_max will be"
                                                                     "normalized when calculating C.")
-
     parser.add_argument('--c', type=float, default=0.05, help="The (negative) curvature of the Poincare ball when using hyperbolic space to calculate C.")
 
 
