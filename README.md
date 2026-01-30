@@ -21,7 +21,7 @@ This is our implementation of our paper *Reciprocal Transport with Dynamic Hyper
 ![Framework](./IIRC-Setup.png)
 
 ## Our method: RTDHH
-
+![Framework](./RTDHH-Framework.png)
 
 ## Dependencies
 lmdb==1.4.1
@@ -85,5 +85,4 @@ pip install torch==1.10.1+cu111 torchvision==0.11.2+cu111 -f https://download.py
     ```
     python main.py --config_path "../experiments/experiments_configurations/configurations_imagenet_full.json" --config_group RTDHH_20 
     ```
-
 
