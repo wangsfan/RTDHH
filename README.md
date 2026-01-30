@@ -72,6 +72,7 @@ pip install torch==1.10.1+cu111 torchvision==0.11.2+cu111 -f https://download.py
     ```
 - IIRC-ImageNet-Full
     ```
-    python main.py --config_path "../experiments/experiments_configurations/cconfigurations_imagenet_full.json" --config_group RTDHH_20 
+    python main.py --config_path "../experiments/experiments_configurations/configurations_imagenet_full.json" --config_group RTDHH_20 
     ```
+
 
