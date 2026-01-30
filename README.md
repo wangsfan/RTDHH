@@ -4,7 +4,18 @@ This is our implementation of our paper *Reciprocal Transport with Dynamic Hyper
 **TL;DR**: A method based on dynamic hyperbolic hierarchy and knowledge reciprocal transport for incremental implicitly-refined classification.
 
 **Abstract**:
-—Incremental Implicitly-Refined Classification(IIRC), analog to human cognitive process, is an extended class-incremental learning (CIL) paradigm which requires to not only accumulate knowledge incrementally but refine the understanding of entities through hierarchical associations of superclasses and subclasses. The main challenges lie in: (a) incrementally discovering the hierarchical relation of superclasses and subclasses, and (b) resisting the catastrophic forgetting of the hierarchical relation. Existing methods utilize either static hierarchical relations, or traditional knowledge transfer schemes used in CIL, leading to unsatisfactory performance. We propose a framework called Reciprocal Transport with Dynamic Hyperbolic Hierarchy (RTDHH), which comprises the Dynamic Hyperbolic Hierarchy (DHH), Forward Transport (FT) and Backward Transport (BT) modules. By exploiting the hierarchy representation of hyperbolic geometry, the DHH module continuously updates the hierarchical relation in the hyperbolic space, serving as a cost to guide reciprocal transport. Afterwards, the FT module transfers knowledge from old to new classes, enabling new classes to inherit and build upon old knowledge; while the BT module transfers knowledge reversely, enhancing the old knowledge retention using new classes. Both the FT and BT modules utilize a class knowledge capacity scheme to control transported knowledge quantities. In this way, the three modules create a feedback loop, where refined hierarchy guides the transport, and the transport promotes knowledge interaction to refine the hierarchy. Experiments on IIRC-CIFAR and IIRC-ImageNet benchmarks demonstrate the superiority of RTDHH over state-of-the-art methods. 
+—Incremental Implicitly-Refined Classification(IIRC), analog to human cognitive process, is an extended class-incremental learning (CIL) paradigm 
+ which requires to not only accumulate knowledge incrementally but refine the understanding of entities through hierarchical associations of superclasses and subclasses.
+ The main challenges lie in: (a) incrementally discovering the hierarchical relation of superclasses and subclasses, and (b) resisting the catastrophic forgetting of the hierarchical relation. 
+ Existing methods utilize either static hierarchical relations, or traditional knowledge transfer schemes used in CIL, leading to unsatisfactory performance.
+ We propose a framework called Reciprocal Transport with Dynamic Hyperbolic Hierarchy (RTDHH), which comprises the Dynamic Hyperbolic Hierarchy (DHH),
+ Forward Transport (FT) and Backward Transport (BT) modules. By exploiting the hierarchy representation of hyperbolic geometry, the DHH module continuously
+ updates the hierarchical relation in the hyperbolic space, serving as a cost to guide reciprocal transport.
+ Afterwards, the FT module transfers knowledge from old to new classes, enabling new classes to inherit and build upon old knowledge;
+ while the BT module transfers knowledge reversely, enhancing the old knowledge retention using new classes. 
+ Both the FT and BT modules utilize a class knowledge capacity scheme to control transported knowledge quantities. 
+ In this way, the three modules create a feedback loop, where refined hierarchy guides the transport, and the transport promotes knowledge interaction to refine the hierarchy.
+ Experiments on IIRC-CIFAR and IIRC-ImageNet benchmarks demonstrate the superiority of RTDHH over state-of-the-art methods. 
 
 ## IIRC Setup
 ![Framework](./IIRC-Setup.png)
@@ -74,6 +85,4 @@ pip install torch==1.10.1+cu111 torchvision==0.11.2+cu111 -f https://download.py
     ```
     python main.py --config_path "../experiments/experiments_configurations/configurations_imagenet_full.json" --config_group RTDHH_20 
     ```
-
-
 
